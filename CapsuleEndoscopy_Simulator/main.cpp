@@ -122,10 +122,10 @@ public:
 		double vDirecL2N = norm(vDirec);
 		vDirec /= vDirecL2N;
 
-		pPre.x += vDirec.x * step;
-		pPre.y += vDirec.y * step;
-		pCur.x += vDirec.x * step;
-		pCur.y += vDirec.y * step;
+		pPre.x += vDirec.x * -(step * 0.5);
+		pPre.y += vDirec.y * -(step * 0.5);
+		pCur.x += vDirec.x * -(step * 0.5);
+		pCur.y += vDirec.y * -(step * 0.5);
 		vDirec = pCur - pPre;
 		vDirec /= norm(vDirec);
 
